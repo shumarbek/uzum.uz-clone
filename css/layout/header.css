@@ -49,10 +49,11 @@ header .top__header .container {
 .header__right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
-.header__right a:nth-child(1), .header__right a:nth-child(3) {
+.header__right a:nth-child(1),
+.header__right a:nth-child(3) {
     color: #7f4dff;
 }
 
@@ -66,12 +67,23 @@ header .top__header .container {
 }
 
 .language__select {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.language__select select {
     border: none;
     background: transparent;
     cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    appearance: none;
+    -webkit-appearance: none;
+    /* -moz-appearance: none; */
 }
 
-.language__select:focus {
+.language__select select:focus {
     border: none;
     outline: none;
 }
@@ -86,6 +98,17 @@ header .top__header .container {
 .language__select option:focus {
     border: none;
     outline: none;
+}
+
+.language__select__icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.language__select__icon img {
+    width: 100%;
 }
 
 .logo {
@@ -106,7 +129,7 @@ header .top__header .container {
 .category__button {
     display: flex;
     align-items: center;
-    gap:10px;
+    gap: 10px;
     cursor: pointer;
     background: #f1ecfd;
     color: #7f4dff;

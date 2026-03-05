@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/layout/slider.css">
     <link rel="stylesheet" href="./css/layout/trend__categories.css">
     <link rel="stylesheet" href="./css/layout/cards.css">
+    <link rel="stylesheet" href="./css/layout/footer.css">
 </head>
 
 <body>
@@ -32,22 +33,27 @@
                     <a href="" class="link__button">Sotuvchi bo'lish</a>
                     <span class="header__right__line">|</span>
                     <a href="" class="link__button">Topshirish punktini ochish</a>
-                    <a href="" class="link__button">Savollarim</a>
+                    <a href="" class="link__button">Savol-javob</a>
                     <a href="" class="link__button">Buyurtmalarim</a>
-                    <select name="" id="" class="language__select">
-                        <option value="" selected>
-                            <div class="icon__div">
-                                <img src="./assets/icons/uz-flag-icon.jpg" alt="">
-                            </div>
-                            <span>O`zbekcha</span>
-                        </option>
-                        <option value="">
-                            <div class="icon__div">
-                                <img src="./assets/icons/ru-flag-icon.jpg" alt="">
-                            </div>
-                            <span>Русский</span>
-                        </option>
-                    </select>
+                    <div class="language__select">
+                        <div class="language__select__icon">
+                            <img src="./assets/icons/uz-flag-icon.jpg" alt="">
+                        </div>
+                        <select name="" id="">
+                            <option value="" selected>
+                                <div class="icon__div">
+                                    <img src="./assets/icons/uz-flag-icon.jpg" alt="">
+                                </div>
+                                <span>O`zbekcha</span>
+                            </option>
+                            <option value="">
+                                <div class="icon__div">
+                                    <img src="./assets/icons/ru-flag-icon.jpg" alt="">
+                                </div>
+                                <span>Русский</span>
+                            </option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
@@ -202,11 +208,16 @@
                         <button class="productCard__wishlistBtn">
                             <img src="./assets/icons/heart.png" alt="">
                         </button>
-                        <div class="productCard__orginal">
-                            <div class="productCard__orginal__icon">
-                                <img src="./assets/icons/checked.png" alt="">
+                        <div class="productCard__special">
+                            <div class="productCard__orginal">
+                                <div class="productCard__orginal__icon">
+                                    <img src="./assets/icons/checked.png" alt="">
+                                </div>
+                                <span>ORIGINAL</span>
                             </div>
-                            <span>ORIGINAL</span>
+                            <div class="productCard__cheapest">
+                                <span>ARZON NARX KAFOLATI</span>
+                            </div>
                         </div>
                     </div>
                     <div class="productCard__content">
@@ -221,7 +232,8 @@
                             <p class="productCard__price__credit">86 345 so'm/oyiga</p>
                         </div>
                         <div class="productCard__info">
-                            <p class="productCard__name">Simsiz changyutgich Dreame R10S Essential, tortish quvvati 19 000 Paskal</p>
+                            <p class="productCard__name">Simsiz changyutgich Dreame R10S Essential, tortish quvvati 19
+                                000 Paskal</p>
                             <div class="productCard__rating">
                                 <div class="productCard__rating__icon">
                                     <img src="./assets/icons/star.png" alt="">
@@ -229,6 +241,12 @@
                                 <span class="productCard__rating__number">5.0</span>
                                 <span class="productCard__rating__comments">(278 sharhlar)</span>
                             </div>
+                            <!-- <div class="productCard__new">
+                                <div class="productCard__new__icon">
+                                    <img src="./assets/icons/new-star-icon.png" alt="">
+                                </div>
+                                <span>YANGILIK</span>
+                            </div> -->
                         </div>
                         <button class="productCard__cartBtn">
                             <div class="productCard__cartBtn__icon">
@@ -243,8 +261,150 @@
                 <span>Yana ko'rsatish 10</span>
             </button>
         </div>
+        <div class="container">
+            <h1 class="popular__products">
+                <span>Arzon narxlar kafolati</span>
+                <div class="popular__products__icon">
+                    <img src="./assets/icons/down-arrow.png" alt="">
+                </div>
+            </h1>
+            <div class="cheaper__products__container">
+                <div class="productCard">
+                    <div class="productCard__figure">
+                        <img src="./assets/images/" alt="">
+                        <button class="productCard__wishlistBtn">
+                            <img src="./assets/icons/heart.png" alt="">
+                        </button>
+                        <div class="productCard__special">
+                            <div class="productCard__orginal">
+                                <div class="productCard__orginal__icon">
+                                    <img src="./assets/icons/checked.png" alt="">
+                                </div>
+                                <span>ORIGINAL</span>
+                            </div>
+                            <div class="productCard__cheapest">
+                                <span>ARZON NARX KAFOLATI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productCard__content">
+                        <div class="productCard__price">
+                            <div class="productCard__price__with__card">
+                                <span>1 121 480</span>
+                                <div class="productCard__card__icon">
+                                    <img src="./assets/icons/uzum-card-icon.png" alt="">
+                                </div>
+                            </div>
+                            <p class="productCard__price__without__card">1 219 000</p>
+                            <p class="productCard__price__credit">86 345 so'm/oyiga</p>
+                        </div>
+                        <div class="productCard__info">
+                            <p class="productCard__name">Simsiz changyutgich Dreame R10S Essential, tortish quvvati 19
+                                000 Paskal</p>
+                            <div class="productCard__rating">
+                                <div class="productCard__rating__icon">
+                                    <img src="./assets/icons/star.png" alt="">
+                                </div>
+                                <span class="productCard__rating__number">5.0</span>
+                                <span class="productCard__rating__comments">(278 sharhlar)</span>
+                            </div>
+                            <!-- <div class="productCard__new">
+                                <div class="productCard__new__icon">
+                                    <img src="./assets/icons/new-star-icon.png" alt="">
+                                </div>
+                                <span>YANGILIK</span>
+                            </div> -->
+                        </div>
+                        <button class="productCard__cartBtn">
+                            <div class="productCard__cartBtn__icon">
+                                <img src="./assets/icons/shopping-bag-plus.png" alt="">
+                            </div>
+                            <span>Ertaga</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+
+    <footer>
+        <div class="container">
+            <div class="footer__links">
+                <ul class="footer__list">
+                    <li class="footer__list__title">Biz haqimizda</li>
+                    <li class="footer__list_item">
+                        <a href="" class="footer__list__link">Topshirish punktlari</a>
+                    </li>
+                    <li class="footer__list_item">
+                        <a href="" class="footer__list__link">Vakansiyalar</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__list__title">Foydalanuvchilarga</li>
+                    <li class="footer__list_item">
+                        <a href="" class="footer__list__link">Biz bilan bog'lanish</a>
+                    </li>
+                    <li class="footer__list_item">
+                        <a href="" class="footer__list__link">Savol-Javob</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__list__title">Tadbirkorlarga</li>
+                    <li class="footer__list_item">
+                        <a href="" class="footer__list__link">Uzumda soting</a>
+                    </li>
+                    <li class="footer__list_item">
+                        <a href="" class="footer__list__link">Sotuvchi kabinetiga Kirish</a>
+                    </li>
+                    <li class="footer__list_item">
+                        <a href="" class="footer__list__link">Topshirish punktini ochish</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <div class="footer__app">
+                    <h4 class="footer__app__title">Ilovani yuklab olish</h4>
+                    <div class="footer__app__icons">
+                        <a href="" class="footer__app__icon">
+                            <img src="./assets/icons/appstore-icon.png" alt="appstore">
+                        </a>
+                        <a href="" class="footer__app__icon">
+                            <img src="./assets/icons/googleplay-icon.png" alt="googleplay">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__social__media">
+                    <h4 class="footer__social__media__title">Uzum ijtimoiy tarmoqlarda</h4>
+                    <div class="footer__social__media__icons">
+                        <a href="" class="footer__social__media__icon">
+                            <img src="./assets/icons/instagram-icon.png" alt="instagram">
+                        </a>
+                        <a href="" class="footer__social__media__icon">
+                            <img src="./assets/icons/telegram-icon.png" alt="telegram">
+                        </a>
+                        <a href="" class="footer__social__media__icon">
+                            <img src="./assets/icons/facebook-icon.png" alt="facebook">
+                        </a>
+                        <a href="" class="footer__social__media__icon">
+                            <img src="./assets/icons/youtube-icon.png" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer__bottom">
+                <div class="footer__bottom__left">
+                    <a href="" class="footer__bottom__link">Maxfiylik kelishuvi</a>
+                    <a href="" class="footer__bottom__link">Foydalanuvchi kelishuvi</a>
+                    <a href="" class="footer__bottom__link">SHAXSIY MA'LUMOTLARNI QAYTA ISHLASH NIZOMI «UZUM MARKET» MCHJ XK</a>
+                </div>
+                <div class="footer__copyright">
+                    <p class="footer__copyright__copy">«2026© XK MCHJ «UZUM MARKET». STIR 309376127. Barcha huquqlar himoyalangan»</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./js/main.js"></script>
 </body>
