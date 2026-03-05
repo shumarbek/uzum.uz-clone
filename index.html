@@ -7,6 +7,9 @@
     <title>Uzum Market</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/layout/header.css">
+    <link rel="stylesheet" href="./css/layout/slider.css">
+    <link rel="stylesheet" href="./css/layout/trend__categories.css">
+    <link rel="stylesheet" href="./css/layout/cards.css">
 </head>
 
 <body>
@@ -142,7 +145,105 @@
             </div>
         </div>
     </header>
-    <main></main>
+
+    <main>
+        <div class="container">
+            <div class="slider">
+                <div class="slider__banners">
+                    <img src="./assets/images/slider-1.png" alt="">
+                </div>
+                <div class="slider__items">
+                    <button type="button" class="slider__item"></button>
+                    <button type="button" class="slider__item"></button>
+                    <button type="button" class="slider__item"></button>
+                    <button type="button" class="slider__item"></button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="trend__categories">
+                <button class="trend__category">
+                    <div class="trend__category__icon">
+                        <img src="./assets/images/trend-category-1.png" alt="">
+                    </div>
+                    <span>Onalar va bolalar uchun</span>
+                </button>
+                <button class="trend__category">
+                    <div class="trend__category__icon">
+                        <img src="./assets/images/trend-category-2.png" alt="">
+                    </div>
+                    <span>Arzon narxlar kafolati</span>
+                </button>
+                <button class="trend__category">
+                    <div class="trend__category__icon">
+                        <img src="./assets/images/trend-category-3.png" alt="">
+                    </div>
+                    <span>Zamonaviy bozor</span>
+                </button>
+                <button class="trend__category">
+                    <div class="trend__category__icon">
+                        <img src="./assets/images/trend-category-4.png" alt="">
+                    </div>
+                    <span>8-mart</span>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="popular__products">
+                <span>Mashhur</span>
+                <div class="popular__products__icon">
+                    <img src="./assets/icons/down-arrow.png" alt="">
+                </div>
+            </h1>
+            <div class="popular__products__container">
+                <div class="productCard">
+                    <div class="productCard__figure">
+                        <img src="./assets/images/" alt="">
+                        <button class="productCard__wishlistBtn">
+                            <img src="./assets/icons/heart.png" alt="">
+                        </button>
+                        <div class="productCard__orginal">
+                            <div class="productCard__orginal__icon">
+                                <img src="./assets/icons/checked.png" alt="">
+                            </div>
+                            <span>ORIGINAL</span>
+                        </div>
+                    </div>
+                    <div class="productCard__content">
+                        <div class="productCard__price">
+                            <div class="productCard__price__with__card">
+                                <span>1 121 480</span>
+                                <div class="productCard__card__icon">
+                                    <img src="./assets/icons/uzum-card-icon.png" alt="">
+                                </div>
+                            </div>
+                            <p class="productCard__price__without__card">1 219 000</p>
+                            <p class="productCard__price__credit">86 345 so'm/oyiga</p>
+                        </div>
+                        <div class="productCard__info">
+                            <p class="productCard__name">Simsiz changyutgich Dreame R10S Essential, tortish quvvati 19 000 Paskal</p>
+                            <div class="productCard__rating">
+                                <div class="productCard__rating__icon">
+                                    <img src="./assets/icons/star.png" alt="">
+                                </div>
+                                <span class="productCard__rating__number">5.0</span>
+                                <span class="productCard__rating__comments">(278 sharhlar)</span>
+                            </div>
+                        </div>
+                        <button class="productCard__cartBtn">
+                            <div class="productCard__cartBtn__icon">
+                                <img src="./assets/icons/shopping-bag-plus.png" alt="">
+                            </div>
+                            <span>Ertaga</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="show__more">
+                <span>Yana ko'rsatish 10</span>
+            </button>
+        </div>
+    </main>
     <footer></footer>
 
     <script src="./js/main.js"></script>

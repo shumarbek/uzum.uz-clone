@@ -1,0 +1,36 @@
+.trend__categories {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trend__category {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    font-size: 0.9rem;
+    background: #1001;
+    cursor: pointer;
+}
+
+.trend__category:hover {
+    transition: all 0.2s ease-in-out;
+    background: #1002;
+}
+
+.trend__category__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.trend__category__icon img {
+    width: 100%;
+}

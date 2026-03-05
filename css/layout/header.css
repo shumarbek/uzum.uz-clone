@@ -13,6 +13,21 @@ header .top__header .container {
     padding: 5px 0;
 }
 
+.icon__div {
+    width: 20px;
+    height: 20px;
+}
+
+.icon__div img {
+    width: 100%;
+}
+
+.link__button {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #000;
+}
+
 .header__left {
     display: flex;
     align-items: center;
