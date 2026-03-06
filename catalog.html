@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uzum Market</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/catalogPage.css">
     <link rel="stylesheet" href="./css/layout/header.css">
     <link rel="stylesheet" href="./css/layout/slider.css">
     <link rel="stylesheet" href="./css/layout/trend__categories.css">
@@ -160,61 +161,19 @@
     </header>
 
     <main>
-        <div class="container">
-            <div class="slider">
-                <div class="slider__banners"></div>
-                <div class="slider__items"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="trend__categories">
-                <button class="trend__category">
-                    <div class="trend__category__icon">
-                        <img src="./assets/images/trend-category-1.png" alt="">
-                    </div>
-                    <span>Onalar va bolalar uchun</span>
-                </button>
-                <button class="trend__category">
-                    <div class="trend__category__icon">
-                        <img src="./assets/images/trend-category-2.png" alt="">
-                    </div>
-                    <span>Arzon narxlar kafolati</span>
-                </button>
-                <button class="trend__category">
-                    <div class="trend__category__icon">
-                        <img src="./assets/images/trend-category-3.png" alt="">
-                    </div>
-                    <span>Zamonaviy bozor</span>
-                </button>
-                <button class="trend__category">
-                    <div class="trend__category__icon">
-                        <img src="./assets/images/trend-category-4.png" alt="">
-                    </div>
-                    <span>8-mart</span>
-                </button>
-            </div>
-        </div>
-        <div class="container">
-            <h1 class="popular__products">
-                <span>Mashhur</span>
-                <div class="popular__products__icon">
-                    <img src="./assets/icons/down-arrow.png" alt="">
+        <section class="catalogPage">
+            <div class="container">
+                <aside class="catalogPage__filter">
+                    <h3>Turkumlar</h3>
+                    <div class="catalogPage__categories"></div>
+                </aside>
+                <div class="catalogPage__products">
+                    <h1 class="catalogPage__title"></h1>
+                    <span class="catalogPage__count"></span>
+                    <div class="catalogPage__products__container"></div>
                 </div>
-            </h1>
-            <div class="popular__products__container"></div>
-            <button class="show__more">
-                <span>Yana ko'rsatish 10</span>
-            </button>
-        </div>
-        <div class="container">
-            <h1 class="popular__products">
-                <span>Arzon narxlar kafolati</span>
-                <div class="popular__products__icon">
-                    <img src="./assets/icons/down-arrow.png" alt="">
-                </div>
-            </h1>
-            <div class="cheaper__products__container"></div>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -299,13 +258,13 @@
     </footer>
 
     <script src="./js/main.js"></script>
-    <script src="./js/catalogPage.js"></script>
     <script src="./data/slider/slider.js"></script>
     <script src="./data/product/products.js"></script>
     <script src="./data/category/categories.js"></script>
     <script src="./js/modules/slider.js"></script>
     <script src="./js/modules/cards.js"></script>
     <script src="./js/modules/category.js"></script>
+    <script src="./js/catalogPage.js"></script>
 </body>
 
 </html>

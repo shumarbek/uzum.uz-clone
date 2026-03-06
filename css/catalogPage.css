@@ -1,0 +1,46 @@
+.catalogPage .container {
+    display: flex;
+    gap: 20px;
+}
+
+.catalogPage__filter {
+    width: 260px;
+}
+
+.catalogPage__filter h3 {
+    margin-bottom: 20px;
+}
+
+.catalogPage__products {
+    flex: 1;
+}
+
+.catalogPage__products__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.catalogPage__products__container .productCard {
+    width: 218px;
+}
+
+.catalogPage__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.catalogPage__categories button {
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.catalogPage__categories button:hover {
+    background: #f5f5f5;
+}

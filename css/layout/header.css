@@ -126,7 +126,7 @@ header .top__header .container {
     gap: 10px;
 }
 
-.category__button {
+.catalog__button {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -135,9 +135,11 @@ header .top__header .container {
     color: #7f4dff;
     padding: 10px 15px;
     border-radius: 5px;
+    border: none;
+    font-size: 0.95rem;
 }
 
-.category__button:hover {
+.catalog__button:hover {
     transition: all 0.1s ease-in-out;
     background: #e3daf9;
 }
