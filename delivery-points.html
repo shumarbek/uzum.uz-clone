@@ -168,86 +168,62 @@
             </div>
             <div class="container">
                 <aside class="delivery-points__filter">
-                    <a href="./delivery-points.html" class="delivery-points__filter__link">Topshirish punktlari</a>
-                    <a href="./vacancies.html" class="delivery-points__filter__link">Vakansiyalar</a>
+                    <p class="delivery-points__filter__link pointsBtn">Topshirish punktlari</p>
+                    <p class="delivery-points__filter__link vacancyBtn">Vakansiyalar</p>
                 </aside>
-                <div class="delivery-points__locations">
-                    <h1 class="delivery-points__locations__title">Topshirish punkti</h1>
-                    <p class="delivery-points__locations__numbers">Oʻzbekiston <span>0</span> ta shahridagi topshirish punktlariga bepul yetkazib berish</p>
-                    <div class="delivery-points__locations__div">
-                        <div class="delivery-points__locations__list">
-                            <p class="delivery-points__locations__list__title">Shahar</p>
-                            <select name="city" id="city" class="delivery-points__locations__lists">
-                                <option value="">Toshkent</option>
-                                <option value="">Toshkent shahri</option>
-                                <option value="">Samarqand shahri</option>
-                                <option value="">Buxoro shahri</option>
-                                <option value="">Andijon shahri</option>
-                                <option value="">Namangan shahri</option>
-                                <option value="">Farg'ona shahri</option>
-                                <option value="">Qashqadaryo shahri</option>
-                                <option value="">Sirdaryo shahri</option>
-                                <option value="">Surxondaryo shahri</option>
-                                <option value="">Jizzax shahri</option>
-                                <option value="">Xorazm shahri</option>
-                                <option value="">Qoraqalpog'iston shahri</option>
-                            </select>
-                            <div class="delivery-points__locations__list__cards">
-                                <a href="#" class="delivery-points__locations__list__card">
-                                    <h2 class="delivery-points__locations__list__card__title">Toshkent sh., Mirobod
-                                        tumani, Mehrjon ko'chasi, 2 uy</h2>
-                                    <div class="delivery-points__locations__list__card__info">
-                                        <div>
-                                            <img src="../assets/icons/delivery-points/hanger.png" alt="hanger">
-                                        </div>
-                                        <p>Kiyib koʻrish joyi bor</p>
-                                    </div>
-                                    <div class="delivery-points__locations__list__card__info">
-                                        <div>
-                                            <img src="../assets/icons/delivery-points/pin.png" alt="pin">
-                                        </div>
-                                        <p>Toshkent sh., Mirobod tumani, Mehrjon ko'chasi, 2 uy</p>
-                                    </div>
-                                    <div class="delivery-points__locations__list__card__info">
-                                        <div>
-                                            <img src="../assets/icons/delivery-points/clock.png" alt="clock">
-                                        </div>
-                                        <table>
-                                            <tr>
-                                                <td>Dushanba:</td>
-                                                <td>10:00 - 20:00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Seshanba:</td>
-                                                <td>10:00 - 20:00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Chorshanba:</td>
-                                                <td>10:00 - 20:00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Payshanba:</td>
-                                                <td>10:00 - 20:00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Juma:</td>
-                                                <td>10:00 - 20:00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Shanba:</td>
-                                                <td>10:00 - 20:00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Yakshanba:</td>
-                                                <td>10:00 - 20:00</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </a>       
+                <div class="container__right">
+                    <div class="delivery-points__locations active">
+                        <h1 class="delivery-points__locations__title">Topshirish punkti</h1>
+                        <p class="delivery-points__locations__numbers">Oʻzbekiston <span>0</span> ta shahridagi
+                            topshirish punktlariga bepul yetkazib berish</p>
+                        <div class="delivery-points__locations__div">
+                            <div class="delivery-points__locations__list">
+                                <p class="delivery-points__locations__list__title">Shahar</p>
+                                <select name="city" id="city" class="delivery-points__locations__lists">
+                                    <option value="">Toshkent</option>
+                                    <option value="">Toshkent shahri</option>
+                                    <option value="">Samarqand shahri</option>
+                                    <option value="">Buxoro shahri</option>
+                                    <option value="">Andijon shahri</option>
+                                    <option value="">Namangan shahri</option>
+                                    <option value="">Farg'ona shahri</option>
+                                    <option value="">Qashqadaryo shahri</option>
+                                    <option value="">Sirdaryo shahri</option>
+                                    <option value="">Surxondaryo shahri</option>
+                                    <option value="">Jizzax shahri</option>
+                                    <option value="">Xorazm shahri</option>
+                                    <option value="">Qoraqalpog'iston shahri</option>
+                                </select>
+                                <div class="delivery-points__locations__list__cards"></div>
+                            </div>
+                            <div class="delivery-points__locations__map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d737799.6929256151!2d68.53902834042576!3d41.26129149392001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b71bde1ff23%3A0x1f5e63efaf85908c!2sUzum%20Market!5e1!3m2!1sen!2s!4v1772875744433!5m2!1sen!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
-                        <div class="delivery-points__locations__map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d737799.6929256151!2d68.53902834042576!3d41.26129149392001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b71bde1ff23%3A0x1f5e63efaf85908c!2sUzum%20Market!5e1!3m2!1sen!2s!4v1772875744433!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="vakansiya">
+                        <h1 class="vakansiya__title">Vakansiyalar</h1>
+                        <p class="vakansiya__text">Uzum Market jamoasining safiga qo’shilmoqchimisiz? Nima uchun bizga mos kelishingiz haqida so’zlab bering va o’z rezyumengizni yuboring</p>
+                        <div class="vakansiya__actions">
+                            <a href="https://tashkent.hh.uz/employer/6132255?hhtmFrom=vacancy" class="vakansiya__button" target="_blank">UZUM MARKETʼDA ISHLASHNI ISTAYMAN</a>
+                            <a href="https://t.me/Uzum_jbot" class="vakansiya__button" target="_blank">Telegram bot - @Uzum_jbot</a>
+                        </div>
+                        <div class="vakansiya__content">
+                            <p class="vakansiya__text">Oʻzingizga mos kasbni topadigan ish profillari:</p>
+                            <ol>
+                                <li>- Buxgalteriya va moliya</li>
+                                <li>- Uzum Market yetkazib berish xizmati</li>
+                                <li>- Maʼmuriy xodim</li>
+                                <li>- Ombor logistikasi</li>
+                                <li>- Aloqa markazi</li>
+                                <li>- Xodimlar boshqaruvi</li>
+                            </ol>
+                            <p class="vakansiya__text">Agar hali sizning orzuyingizdagi vakansiya bizda ochilmagan boʻlsa, oʻzingizga qulay usulda rezyumeni zaxiraga yuboring:</p>
+                            <p class="vakansiya__text">Telegram: <a href="https://t.me/HR_UZUM" target="_blank">@HR_UZUM</a></p>
+                            <p class="vakansiya__text">Email: <a href="mailto:hr-market@uzum.com">hr-market@uzum.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -264,7 +240,7 @@
                         <a href="./delivery-points.html" class="footer__list__link">Topshirish punktlari</a>
                     </li>
                     <li class="footer__list_item">
-                        <a href="" class="footer__list__link">Vakansiyalar</a>
+                        <a href="./delivery-points.html" class="footer__list__link">Vakansiyalar</a>
                     </li>
                 </ul>
                 <ul class="footer__list">
@@ -337,12 +313,10 @@
     </footer>
 
     <script src="./js/main.js"></script>
-    <script src="./data/slider/slider.js"></script>
-    <script src="./data/product/products.js"></script>
     <script src="./data/category/categories.js"></script>
-    <script src="./js/modules/slider.js"></script>
-    <script src="./js/modules/cards.js"></script>
+    <script src="./data/delivery-points/points.js"></script>
     <script src="./js/modules/category.js"></script>
+    <script src="./js/modules/delivery-points.js"></script>
     <script src="./js/catalogPage.js"></script>
 </body>
 
