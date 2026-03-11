@@ -21,15 +21,16 @@
 
 .popular__products__container, .cheaper__products__container{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     /* justify-content: space-between; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 20px;
     margin-top: 20px;
 }
 
 .productCard {
-    width: 18.7%;
+    width: 100%;
     border-radius: 13px;
     user-select: none;
 }

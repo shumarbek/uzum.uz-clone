@@ -180,6 +180,7 @@ header .top__header .container {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #000;
 }
 
 .header__button {
@@ -190,11 +191,12 @@ header .top__header .container {
     font-size: 0.9rem;
     padding: 10px;
     border-radius: 5px;
+    color: #000;
 }
 
 .header__button:hover {
     transition: all 0.1s ease-in-out;
-    background: #1001;
+    background: #1002;
 }
 
 .top__categories {

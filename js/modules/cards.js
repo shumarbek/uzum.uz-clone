@@ -81,38 +81,41 @@ class Product {
     }
 }
 
-let i = 0;
-products.forEach(product => {
-    if (i < 10) {
-        new Product(product.id, product.name, product.image, product.orginal, product.isCheapest, product.isNew, product.price, product.byCard, product.credit, product.rating, product.comments, product.deliveryTime, document.querySelector('.popular__products__container')).render();
-
-        i++;
+let bigParent = ['.popular__products__container', '.wishes__empty__recommendations__cards']
+bigParent.forEach(parent => {
+    if (document.querySelector(parent)) {
+        let i = 0;
+        products.forEach(product => {
+            if (i < 10) {
+                new Product(product.id, product.name, product.image, product.orginal, product.isCheapest, product.isNew, product.price, product.byCard, product.credit, product.rating, product.comments, product.deliveryTime, document.querySelector(parent)).render();
+                i++;
+            }
+        })
     }
 })
 
 
 
-// productCard larni random chiqarish #####
-function shuffleArray(array) {
-    const shuffled = [...array]
+let bigCheaperParent = '.cheaper__products__container'
 
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
+if (document.querySelector(bigCheaperParent)) {
+    function shuffleArray(array) {
+        const shuffled = [...array]
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1))
             ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+        }
+        return shuffled
     }
 
-    return shuffled
+    const cheapestProducts = products.filter(product => product.isCheapest)
+    const randomProducts = shuffleArray(cheapestProducts).slice(0, 10)
+
+    let k = 0;
+    randomProducts.forEach(product => {
+        if (k < 10) {
+            new Product(product.id, product.name, product.image, product.orginal, product.isCheapest, product.isNew, product.price, product.byCard, product.credit, product.rating, product.comments, product.deliveryTime, document.querySelector('.cheaper__products__container')).render()
+            k++;
+        }
+    })
 }
-
-const cheapestProducts = products.filter(product => product.isCheapest)
-const randomProducts = shuffleArray(cheapestProducts).slice(0, 10)
-
-let k = 0;
-randomProducts.forEach(product => {
-    if (k < 10) {
-        new Product(product.id, product.name, product.image, product.orginal, product.isCheapest, product.isNew, product.price, product.byCard, product.credit, product.rating, product.comments, product.deliveryTime, document.querySelector('.cheaper__products__container')
-        ).render()
-
-        k++;
-    }
-})
