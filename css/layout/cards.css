@@ -33,6 +33,7 @@
     width: 100%;
     border-radius: 13px;
     user-select: none;
+    cursor: pointer;
 }
 
 .productCard:hover {

@@ -81,6 +81,17 @@ class Product {
     }
 }
 
+// Navigate to product page when card is clicked (not on buttons)
+document.addEventListener('click', function(e) {
+    const card = e.target.closest('.productCard');
+    if (!card) return;
+    if (e.target.closest('.productCard__wishlistBtn') || e.target.closest('.productCard__cartBtn')) return;
+    const cartBtn = card.querySelector('.productCard__cartBtn');
+    if (cartBtn && cartBtn.value) {
+        window.location.href = `./product.html?id=${cartBtn.value}`;
+    }
+});
+
 let bigParent = ['.popular__products__container', '.wishes__empty__recommendations__cards']
 bigParent.forEach(parent => {
     if (document.querySelector(parent)) {

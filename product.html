@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulot — Uzum Market</title>
+    <link rel="icon" href="./assets/icons/tab-logo.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/layout/header.css">
+    <link rel="stylesheet" href="./css/layout/cards.css">
+    <link rel="stylesheet" href="./css/layout/catalog.css">
+    <link rel="stylesheet" href="./css/layout/footer.css">
+    <link rel="stylesheet" href="./css/product.css">
+</head>
+
+<body>
+    <header>
+        <div class="top__header">
+            <div class="container">
+                <div class="header__left">
+                    <div class="header__location">
+                        <div class="icon__div"><img src="./assets/icons/pin.png" alt=""></div>
+                        <span>Toshkent</span>
+                        <div class="icon__div"><img src="./assets/icons/down-arrow.png" alt=""></div>
+                    </div>
+                    <a href="./delivery-points.html" class="link__button">Topshirish punktlari</a>
+                </div>
+                <div class="header__right">
+                    <a href="" class="link__button">Sotuvchi bo'lish</a>
+                    <span class="header__right__line">|</span>
+                    <a href="" class="link__button">Topshirish punktini ochish</a>
+                    <a href="" class="link__button">Savol-javob</a>
+                    <a href="" class="link__button">Buyurtmalarim</a>
+                    <div class="language__select">
+                        <div class="language__select__icon">
+                            <img src="./assets/icons/uz-flag-icon.jpg" alt="">
+                        </div>
+                        <select>
+                            <option value="" selected>O`zbekcha</option>
+                            <option value="">Русский</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <a href="./index.html" class="logo">
+                <img src="./assets/icons/logo-icon+name.png" alt="Uzum">
+            </a>
+            <div class="header__middle">
+                <button class="catalog__button">
+                    <div class="icon__div"><img src="./assets/icons/catalog.png" alt=""></div>
+                    <span>Katalog</span>
+                </button>
+                <div class="search">
+                    <input type="text" class="search__input" placeholder="Mahsulotlar va turkumlar izlash">
+                    <button type="submit" class="search__button">
+                        <div class="icon__div"><img src="./assets/icons/loupe.png" alt=""></div>
+                    </button>
+                </div>
+            </div>
+            <div class="header__actions">
+                <div class="header__button">
+                    <div class="icon__div"><img src="./assets/icons/people.png" alt=""></div>
+                    <span>Kirish</span>
+                </div>
+                <a href="./wishes.html" class="header__button">
+                    <div class="icon__div"><img src="./assets/icons/heart.png" alt=""></div>
+                    <span>Saralangan</span>
+                </a>
+                <div class="header__button">
+                    <div class="icon__div"><img src="./assets/icons/shopping-bag.png" alt=""></div>
+                    <span>Savat</span>
+                </div>
+            </div>
+        </div>
+        <div class="catalog-container">
+            <div class="catalog">
+                <div class="catalog-left"></div>
+                <div class="catalog-right"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="top__categories">
+                <div class="top__category__button">
+                    <div class="icon__div"><img src="./assets/images/category-1.png" alt=""></div>
+                    <span>Hafta tovarlari</span>
+                </div>
+                <div class="top__category__button">
+                    <div class="icon__div"><img src="./assets/images/category-2.png" alt=""></div>
+                    <span>Bahorgi kolleksiya</span>
+                </div>
+                <div class="top__category__button">
+                    <div class="icon__div"><img src="./assets/images/category-3.png" alt=""></div>
+                    <span>Sizning go'zalligingiz</span>
+                </div>
+                <div class="top__category__button">
+                    <div class="icon__div"><img src="./assets/images/category-4.png" alt=""></div>
+                    <span>Hobbi va ijod</span>
+                </div>
+                <div class="top__category__button">
+                    <div class="icon__div"><img src="./assets/images/category-5.png" alt=""></div>
+                    <span>Smartfonlar</span>
+                </div>
+                <div class="top__category__button">
+                    <div class="icon__div"><img src="./assets/images/category-6.png" alt=""></div>
+                    <span>Ramazon oyi</span>
+                </div>
+                <a class="top__category__link"><span>Mebel</span></a>
+                <a class="top__category__link"><span>Turizm, baliq ovi va ovchilik</span></a>
+                <a class="top__category__link">
+                    <span>Yana</span>
+                    <div class="icon__div"><img src="./assets/icons/down-arrow.png" alt=""></div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- JS bu yerga hamma narsani render qiladi -->
+    <main id="productApp"></main>
+
+    <footer>
+        <div class="container">
+            <div class="footer__links">
+                <ul class="footer__list">
+                    <li class="footer__list__title">Biz haqimizda</li>
+                    <li class="footer__list_item"><a href="./delivery-points.html" class="footer__list__link">Topshirish punktlari</a></li>
+                    <li class="footer__list_item"><a href="./delivery-points.html" class="footer__list__link">Vakansiyalar</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__list__title">Foydalanuvchilarga</li>
+                    <li class="footer__list_item"><a href="" class="footer__list__link">Biz bilan bog'lanish</a></li>
+                    <li class="footer__list_item"><a href="" class="footer__list__link">Savol-Javob</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__list__title">Tadbirkorlarga</li>
+                    <li class="footer__list_item"><a href="" class="footer__list__link">Uzumda soting</a></li>
+                    <li class="footer__list_item"><a href="" class="footer__list__link">Sotuvchi kabinetiga Kirish</a></li>
+                    <li class="footer__list_item"><a href="" class="footer__list__link">Topshirish punktini ochish</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <div class="footer__app">
+                    <h4 class="footer__app__title">Ilovani yuklab olish</h4>
+                    <div class="footer__app__icons">
+                        <a href="" class="footer__app__icon"><img src="./assets/icons/appstore-icon.png" alt="appstore"></a>
+                        <a href="" class="footer__app__icon"><img src="./assets/icons/googleplay-icon.png" alt="googleplay"></a>
+                    </div>
+                </div>
+                <div class="footer__social__media">
+                    <h4 class="footer__social__media__title">Uzum ijtimoiy tarmoqlarda</h4>
+                    <div class="footer__social__media__icons">
+                        <a href="" class="footer__social__media__icon"><img src="./assets/icons/instagram-icon.png" alt="instagram"></a>
+                        <a href="" class="footer__social__media__icon"><img src="./assets/icons/telegram-icon.png" alt="telegram"></a>
+                        <a href="" class="footer__social__media__icon"><img src="./assets/icons/facebook-icon.png" alt="facebook"></a>
+                        <a href="" class="footer__social__media__icon"><img src="./assets/icons/youtube-icon.png" alt="youtube"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer__bottom">
+                <div class="footer__bottom__left">
+                    <a href="" class="footer__bottom__link">Maxfiylik kelishuvi</a>
+                    <a href="" class="footer__bottom__link">Foydalanuvchi kelishuvi</a>
+                    <a href="" class="footer__bottom__link">SHAXSIY MA'LUMOTLARNI QAYTA ISHLASH NIZOMI</a>
+                </div>
+                <div class="footer__copyright">
+                    <p class="footer__copyright__copy">«2026© XK MCHJ «UZUM MARKET». STIR 309376127. Barcha huquqlar himoyalangan»</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./data/product/products.js"></script>
+    <script src="./data/category/categories.js"></script>
+    <script src="./js/modules/cards.js"></script>
+    <script src="./js/modules/category.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+
+</html>
