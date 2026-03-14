@@ -327,6 +327,17 @@ function renderPage() {
     });
     setInstallment(24);
 
+    // ── Savatga qo'shish ─────────────────────────────────
+    const cartBtn = document.querySelector('.product__btn__cart');
+    if (cartBtn) {
+        cartBtn.addEventListener('click', () => {
+            if (typeof addToCart === 'function') {
+                addToCart(p, 1);
+                if (typeof showCartToast === 'function') showCartToast();
+            }
+        });
+    }
+
     // ── Wishlist tugmasi ─────────────────────────────────
     const wishBtn = document.getElementById('wishlistBtn');
     wishBtn.addEventListener('click', () => {

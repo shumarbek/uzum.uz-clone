@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/layout/cards.css">
     <link rel="stylesheet" href="./css/layout/catalog.css">
     <link rel="stylesheet" href="./css/layout/footer.css">
+    <link rel="stylesheet" href="./css/layout/cart.css">
 </head>
 
 <body>
@@ -93,12 +94,13 @@
                     </div>
                     <span>Saralangan</span>
                 </a>
-                <div class="header__button">
+                <a href="./cart.html" class="header__button">
                     <div class="icon__div">
                         <img src="./assets/icons/shopping-bag.png" alt="">
                     </div>
-                    <span>Savat</span>
-                </div>
+                    <span class="cartBtn__text">Savat</span>
+                    <span class="cart__badge">0</span>
+                </a>
             </div>
         </div>
         <div class="catalog-container">
@@ -264,6 +266,7 @@
     <script src="./js/modules/cards.js"></script>
     <script src="./js/modules/category.js"></script>
     <script src="./js/catalogPage.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 
 </html>

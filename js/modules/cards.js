@@ -81,11 +81,140 @@ class Product {
     }
 }
 
+// ── Product Quick-View Modal ───────────────────────────────
+function openProductModal(productId) {
+    if (typeof products === 'undefined') return;
+    const p = products.find(function(pr) { return pr.id === productId; });
+    if (!p) return;
+
+    var qty = 1;
+    var monthlyPayment = Math.round(p.byCard / 24);
+    var deliveryText = (p.deliveryTime === 'Ertaga' || !p.deliveryTime)
+        ? 'Ertaga yetkazib beramiz' : p.deliveryTime + ' da yetkazib beramiz';
+    var oldPriceHTML = p.price > p.byCard
+        ? `<span class="product-modal__price__old">${p.price.toLocaleString('ru-RU').replace(/,/g,' ')} so'm</span>` : '';
+    var cheapestHTML = p.isCheapest
+        ? `<div class="product-modal__cheapest">ARZON NARX KAFOLATI</div>` : '';
+
+    var overlay = document.createElement('div');
+    overlay.className = 'product-modal__overlay';
+    overlay.innerHTML = `
+        <div class="product-modal" role="dialog">
+            <button class="product-modal__close" id="modalClose">✕</button>
+            <h2 class="product-modal__title">${p.name}</h2>
+            <div class="product-modal__kafolat">
+                <img src="./assets/icons/checked.png" alt="kafolat">
+                <span>KAFOLAT 12 OY</span>
+            </div>
+            <div class="product-modal__layout">
+                <div class="product-modal__left">
+                    <div class="product-modal__img">
+                        <img src="${p.image}" alt="${p.name}">
+                    </div>
+                    <a href="./product.html?id=${p.id}" class="product-modal__img__link">
+                        Mahsulot haqidagi bor ma'lumot ›
+                    </a>
+                </div>
+                <div class="product-modal__right">
+                    ${cheapestHTML}
+                    <div class="product-modal__price__main">${p.byCard.toLocaleString('ru-RU').replace(/,/g,' ')} so'm</div>
+                    <div class="product-modal__price__sub">
+                        Uzum kartasiz ${p.price.toLocaleString('ru-RU').replace(/,/g,' ')} so'm
+                        ${oldPriceHTML}
+                    </div>
+                    <div class="product-modal__installment">
+                        Oyiga <strong>${monthlyPayment.toLocaleString('ru-RU').replace(/,/g,' ')} so'mdan</strong>&nbsp; muddatli to'lov
+                        <span>›</span>
+                    </div>
+                    <div class="product-modal__qty__row">
+                        <span class="product-modal__qty__label">Miqdor:</span>
+                        <div class="product-modal__qty">
+                            <button class="modal__qty__btn" id="modalQtyMinus">−</button>
+                            <span class="modal__qty__num" id="modalQtyNum">1</span>
+                            <button class="modal__qty__btn" id="modalQtyPlus">+</button>
+                        </div>
+                        <span class="product-modal__qty__limit">💧 2 dona xarid qilish mumkin</span>
+                    </div>
+                    <button class="product-modal__add__btn" id="modalAddBtn">
+                        Savatga qo'shish
+                        <small>Ertaga yetkazib beramiz</small>
+                    </button>
+                    <div class="product-modal__delivery">
+                        <strong>${deliveryText}</strong>
+                        <p>Uzum buyurtmalarni topshirish punktida yoki kuryer orqali</p>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+
+    function close() {
+        overlay.remove();
+        document.body.style.overflow = '';
+    }
+
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) close();
+    });
+    overlay.querySelector('#modalClose').addEventListener('click', close);
+
+    overlay.querySelector('#modalQtyMinus').addEventListener('click', function() {
+        if (qty > 1) {
+            qty--;
+            overlay.querySelector('#modalQtyNum').textContent = qty;
+        }
+    });
+
+    overlay.querySelector('#modalQtyPlus').addEventListener('click', function() {
+        if (qty < 99) {
+            qty++;
+            overlay.querySelector('#modalQtyNum').textContent = qty;
+        }
+    });
+
+    overlay.querySelector('#modalAddBtn').addEventListener('click', function() {
+        if (typeof addToCart === 'function') {
+            addToCart(p, qty);
+        }
+        close();
+
+        // Show brief toast
+        showCartToast();
+    });
+}
+
+function showCartToast() {
+    var existing = document.querySelector('.cart__toast');
+    if (existing) existing.remove();
+
+    var toast = document.createElement('div');
+    toast.className = 'cart__toast';
+    toast.innerHTML = `<span>✓</span> Savatchaga qo'shildi`;
+    document.body.appendChild(toast);
+    setTimeout(function() { toast.classList.add('cart__toast--show'); }, 10);
+    setTimeout(function() {
+        toast.classList.remove('cart__toast--show');
+        setTimeout(function() { toast.remove(); }, 300);
+    }, 2200);
+}
+
 // Navigate to product page when card is clicked (not on buttons)
 document.addEventListener('click', function(e) {
     const card = e.target.closest('.productCard');
     if (!card) return;
-    if (e.target.closest('.productCard__wishlistBtn') || e.target.closest('.productCard__cartBtn')) return;
+
+    if (e.target.closest('.productCard__cartBtn')) {
+        const btn = card.querySelector('.productCard__cartBtn');
+        if (btn && btn.value) {
+            openProductModal(parseInt(btn.value));
+        }
+        return;
+    }
+
+    if (e.target.closest('.productCard__wishlistBtn')) return;
+
     const cartBtn = card.querySelector('.productCard__cartBtn');
     if (cartBtn && cartBtn.value) {
         window.location.href = `./product.html?id=${cartBtn.value}`;
